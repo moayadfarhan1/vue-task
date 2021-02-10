@@ -67,19 +67,64 @@
           </p>
         </div>
         <div class="tabs" v-cloak>
-    <ul>
-      <li v-for="(tab, index) in tabs" v-bind:key="tab.id" :class="{'is-active': show == index}"><a @click.prevent="show = index">{{tab.tabTitle}}</a></li>
-    </ul>
-  </div>
-  <div class="texts" v-cloak>
-    <transition-group name="fade-up" target="div" appear @click.native="navigate($event); alerts($event);">
-      <div class="d-flex" v-for="(tab, indexTab) in tabs" v-if="show == indexTab" :key="indexTab">
-        <div class="slider" v-for="(slider,indexSlider) in tab.slider" :key="indexSlider">
-          {{slider.desc}}
+          <ul class="d-flex">
+            <li
+              v-for="(tab, index) in tabs"
+              v-bind:key="tab.id"
+              :class="{ 'is-active': show == index }"
+            >
+              <a @click.prevent="show = index">{{ tab.tabTitle }}</a>
+            </li>
+          </ul>
         </div>
-      </div>
-    </transition-group>
-  </div>
+        <div class="tabs-content" v-cloak>
+          <transition-group
+            name="fade-up"
+            target="div"
+            appear
+            @click.native="
+              navigate($event);
+              alerts($event);
+            "
+          >
+            <div
+              v-for="(tab, indexTab) in tabs"
+              v-if="show == indexTab"
+              :key="indexTab"
+            >
+              <div class="slider"
+                v-for="(slider, indexSlider) in tab.slider"
+                :key="indexSlider"
+              >
+                <div class="left-section">
+                  <div class="img-slider">
+                    <img :src="getUrl(slider.name)" alt="" srcset="">
+                  </div>
+                  <div class="slider-info">
+                    <div class="slider-number">{{slider.num}}</div>
+                    <div class="slider-title">{{slider.title}}</div>
+                  </div>
+                  <div class="slider-nav">
+                      <button class="btn-slider prew"></button>
+                      <button class="btn-slider next"></button>
+                  </div>
+                </div>
+                <div class="right-section">
+                    <div class="trip-title">
+                      {{ tab.tabTitle }}
+                    </div>
+                    <div class="trip-desc">
+                      <div>{{tab.desc1}}</div>
+                      <div>{{tab.desc2}}</div>
+                    </div>
+                    
+
+                    <button class="btn">SEE OUR LATEST OFFER</button>
+                  </div>
+              </div>
+            </div>
+          </transition-group>
+        </div>
       </div>
     </section>
   </div>
@@ -91,28 +136,31 @@ export default {
   data() {
     return {
       show: 0,
-      tabs:trips
-
+      tabs: trips,
     };
   },
   components: {},
-   methods:{
-    navigate: function(e){
+  methods: {
+    navigate: function (e) {
       if (e.target.dataset.show) {
         e.preventDefault();
         this.show = e.target.dataset.show;
       }
     },
-    alerts: function(e){
+    alerts: function (e) {
       if (e.target.dataset.alert) {
         e.preventDefault();
         alert(e.target.dataset.alert);
       }
+    },
+    getUrl(imageName){
+      console.log(imageName);
+       return require("@/assets/images/" + imageName);
     }
   },
-  created(){
-    console.log(this.tabs);
-  }
+  created() {
+    // console.log(this.tabs);
+  },
 };
 </script>
 
