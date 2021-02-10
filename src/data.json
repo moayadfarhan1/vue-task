@@ -1,0 +1,74 @@
+ 
+[
+    {
+        "id": 0,
+        "tabTitle": "Chill Adventure",
+        "desc1": "Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames. Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.",
+        "desc2": "Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur.",
+        "slider": [
+            {
+                "name": "Image.svg",
+                "title": "GRAND DUNES LANDSCAPE",
+                "num": "01."
+            },{
+                "name": "NT.svg",
+                "title": "GRAND DUNES LANDSCAPE",
+                "num": "02."
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "tabTitle": "Spooky Times",
+        "desc1": "Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames. Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit.",
+        "desc2": "Veritatis maxime, corporis iure repellat nesciunt animi voluptatem expedita repudiandae eligendi obcaecati consequatur iste eveniet autem officiis pariatur porro quam necessitatibus natus.",
+        "slider": [
+            {
+                "name": "Image.svg",
+                "title": "GRAND DUNES LANDSCAPE",
+                "num": "01."
+            },
+            {
+                "name": "Image.svg",
+                "title": "GRAND DUNES LANDSCAPE",
+                "num": "02."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "tabTitle": "Desert Madness",
+        "desc1": "Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.",
+        "desc2": "Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.",
+        "slider": [
+            {
+                "name": "Image.svg",
+                "title": "GRAND DUNES LANDSCAPE",
+                "num": "01."
+            },
+            {
+                "name": "Image.svg",
+                "title": "GRAND DUNES LANDSCAPE",
+                "num": "02."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "tabTitle": "Out in the wild",
+        "desc1": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "desc2": "Veritatis maxime, corporis iure repellat nesciunt animi voluptatem expedita repudiandae eligendi obcaecati consequatur iste eveniet autem officiis pariatur porro quam necessitatibus natus.",
+        "slider": [
+            {
+                "name": "Image.svg",
+                "title": "GRAND DUNES LANDSCAPE",
+                "num": "01."
+            },
+            {
+                "name": "Image.svg",
+                "title": "GRAND DUNES LANDSCAPE",
+                "num": "02."
+            }
+        ]
+    }
+]

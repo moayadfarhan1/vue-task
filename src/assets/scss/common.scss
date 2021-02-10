@@ -58,7 +58,7 @@ body {
 }
 
 .bg-bottom {
-    background-image: url("~@/assets/images/lights.png");
+    background-image: url("~@/assets/images/lights.svg");
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
@@ -164,7 +164,7 @@ body {
             position: absolute;
             width: 132px;
             height: 12px;
-            bottom: 0;
+            bottom: 10px;
             border-bottom: 2px solid #41ead4;
             border-right: 2px solid #41ead4;
             margin-top: -16px;
@@ -176,7 +176,7 @@ body {
             font-weight: bold;
             font-size: 15px;
             line-height: 150%;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             text-transform: uppercase;
         }
     }
@@ -525,6 +525,7 @@ body {
 
                     img {
                         max-width: 100%;
+                        min-width: 486px;
                         position: relative;
                         border-radius: 10px;
                     }
@@ -533,7 +534,7 @@ body {
                 &::after {
                     display: none;
                     content: '';
-                    background-image: url('~@/assets/images/Dots.png');
+                    background-image: url('~@/assets/images/Dots.svg');
                     position: absolute;
                     bottom: -58px;
                     left: -55px;
@@ -558,7 +559,7 @@ body {
                         box-shadow: -10px 14px 24px rgb(1 22 39 / 8%);
 
                         &.next,
-                        &.prew {
+                        &.prev {
                             background-image: url("~@/assets/images/arrow.svg");
                             background-repeat: no-repeat;
                             background-position: 50%;
@@ -568,7 +569,7 @@ body {
                             }
                         }
 
-                        &.prew {
+                        &.prev {
                             transform: rotate(180deg);
                             border-left: 2px solid rgba(19, 49, 73, .5);
                             border-bottom-right-radius: 12px;
