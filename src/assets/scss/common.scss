@@ -72,6 +72,7 @@ body {
     &:hover {
         background: #06b2c5;
         border-radius: 48px;
+
         &::after {
             right: 0px;
         }
@@ -84,60 +85,75 @@ body {
     }
 }
 
-.header {
-    @extend .d-flex,
-    .align-center,
-    .space-between;
-    padding-top: 20px;
 
-    .logo {
-        width: 60px;
-    }
-
-    .search-icon {
-        width: 18px;
-        margin-right: 20px;
-    }
-}
-
-.about-trips {
-    .title {
-        font-family: Noe Display;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 60px;
-        margin-top: 60px;
-        text-align: center;
-        line-height: 100px;
-        color: #FFFFFF;
-    }
-
-    .sub-title {
-        font-family: Larsseit;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 12px;
-        text-align: center;
-        text-transform: uppercase;
-    }
-
-    p {
-        font-family: Larsseit;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 17px;
-        margin-top: 25px;
-        line-height: 16px;
-        text-align: center;
-        color: #FFFFFF;
-        width: 100%;
-    }
-
-
-}
-
+// start top section
 .top-section {
+    .header {
+        @extend .d-flex,
+        .align-center,
+        .space-between;
+        padding-top: 20px;
+
+        .logo {
+            width: 60px;
+        }
+
+        .search-icon {
+            width: 18px;
+            margin-right: 20px;
+            transition: transform .2s;
+
+            /* Animation */
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+    }
+
+    .about-trips {
+        transition: transform .2s;
+
+        /* Animation */
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        .title {
+            font-family: Noe Display;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 60px;
+            margin-top: 60px;
+            text-align: center;
+            line-height: 100px;
+            color: #FFFFFF;
+        }
+
+        .sub-title {
+            font-family: Larsseit;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 12px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-family: Larsseit;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17px;
+            margin-top: 25px;
+            line-height: 16px;
+            text-align: center;
+            color: #FFFFFF;
+            width: 100%;
+        }
+
+
+    }
+
     .top-section-container {
         height: 100vh;
 
@@ -258,9 +274,75 @@ body {
     }
 }
 
+// end top section
+
+// start bottom section
 .bottom-section {
     padding-top: 40px;
+
+    .header-bottom-section {
+        transition: transform .2s;
+
+        /* Animation */
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        .title-2 {
+            font-family: Noe Display;
+            font-style: normal;
+            font-weight: bold;
+            margin: 0 90px 10px 0;
+            font-size: 72px;
+            line-height: 110%;
+        }
+
+        .sub-title {
+            max-width: 349px;
+            width: 100%;
+            font-family: Larsseit;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: -.02em;
+            position: relative;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: -54px;
+                top: 50%;
+                width: 18px;
+                height: 2px;
+                background-color: #41ead4;
+                border-radius: 50px;
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+            }
+
+            &::before {
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    .fade-up-enter-active,
+    .fade-up-leave-active {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .fade-up-enter,
+    .fade-up-leave-to {
+        height: 0;
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
 }
+
+// end bottom section
 
 .position-relative {
     position: relative;
@@ -317,52 +399,53 @@ body {
         }
     }
 
-    .header {
-        @extend .d-flex,
-        .align-center,
-        .space-between;
-        padding-top: 40px;
-
-        .logo {
-            width: 60px;
-        }
-
-        .search-icon {
-            width: 18px;
-            margin-right: 40px;
-        }
-    }
-
-    .about-trips {
-        min-height: calc(100vh - 248px);
-
-        .title {
-            font-size: 120px;
-            line-height: 153px;
-            margin-top: 120px;
-        }
-
-        .sub-title {
-            font-size: 18px;
-            line-height: 24px;
-            margin-top: 15px;
-        }
-
-        p {
-            width: 643px;
-            margin: auto;
-            font-size: 17px;
-            line-height: 25px;
-            margin-top: 50px;
-        }
-    }
-
     .top-section {
+        .header {
+            @extend .d-flex,
+            .align-center,
+            .space-between;
+            padding-top: 40px;
+
+            .logo {
+                width: 60px;
+            }
+
+            .search-icon {
+                width: 18px;
+                margin-right: 40px;
+            }
+        }
+
+        .about-trips {
+            min-height: calc(100vh - 248px);
+
+            .title {
+                font-size: 120px;
+                line-height: 153px;
+                margin-top: 120px;
+            }
+
+            .sub-title {
+                font-size: 18px;
+                line-height: 24px;
+                margin-top: 15px;
+            }
+
+            p {
+                width: 643px;
+                margin: auto;
+                font-size: 17px;
+                line-height: 25px;
+                margin-top: 50px;
+            }
+        }
+
         .top-section-container {
             .social-links {
                 bottom: 150px;
                 right: 0;
             }
+
             .scroll-container {
                 position: absolute;
                 bottom: 262px;
@@ -406,4 +489,19 @@ body {
             }
         }
     }
+
+    // start bottom section
+    .bottom-section {
+        padding-top: 40px;
+
+        .title-2 {
+            font-family: Noe Display;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 72px;
+            line-height: 110%;
+        }
+    }
+
+    // end bottom section
 }

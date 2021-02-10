@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <section class="top-section bg-image">
-      <div class="container container-sm container-md container-lg position-relative top-section-container">
+      <div
+        class="container container-sm container-md container-lg position-relative top-section-container"
+      >
         <!-- start Header -->
         <header class="header">
           <!-- Logo -->
@@ -33,38 +35,84 @@
             ultricies. Enim in in in pulvinar nulla sollicitudin. Ullamcorper.
           </p>
         </div>
-          <div class="social-links">
-            <a href="http://" target="_blank" rel="noopener noreferrer">
-              <img src="@/assets/images/twitter.svg" alt="twitter" srcset=""/>
-            </a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
-              <img width="20px" src="@/assets/images/instagram.svg" alt="twitter" srcset=""/>
-            </a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
-              <img src="@/assets/images/facebook.svg" alt="twitter" srcset=""/>
-            </a>
-          </div>
-          <div class="scroll-container">
-            <span class="scroll-text">scroll</span>
-          </div>
+        <div class="social-links">
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <img src="@/assets/images/twitter.svg" alt="twitter" srcset="" />
+          </a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <img
+              width="20px"
+              src="@/assets/images/instagram.svg"
+              alt="twitter"
+              srcset=""
+            />
+          </a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <img src="@/assets/images/facebook.svg" alt="twitter" srcset="" />
+          </a>
+        </div>
+        <div class="scroll-container">
+          <span class="scroll-text">scroll</span>
+        </div>
       </div>
       <div class="divider"></div>
     </section>
     <section class="bottom-section bg-bottom">
       <div class="container container-sm container-md container-lg">
-        asdasdsa
+        <div class="d-flex align-center flex-wrap header-bottom-section">
+          <h2 class="title-2">Pick your trip</h2>
+          <p class="sub-title">
+            Our team put together some trips to you to discover, feel free to
+            discover each of them.
+          </p>
+        </div>
+        <div class="tabs" v-cloak>
+    <ul>
+      <li v-for="(tab, index) in tabs" v-bind:key="tab.id" :class="{'is-active': show == index}"><a @click.prevent="show = index">{{tab.tabTitle}}</a></li>
+    </ul>
+  </div>
+  <div class="texts" v-cloak>
+    <transition-group name="fade-up" target="div" appear @click.native="navigate($event); alerts($event);">
+      <div class="d-flex" v-for="(tab, indexTab) in tabs" v-if="show == indexTab" :key="indexTab">
+        <div class="slider" v-for="(slider,indexSlider) in tab.slider" :key="indexSlider">
+          {{slider.desc}}
+        </div>
+      </div>
+    </transition-group>
+  </div>
       </div>
     </section>
   </div>
 </template>
 <script>
+import trips from "./data.json";
 export default {
   name: "App",
   data() {
-    return {};
+    return {
+      show: 0,
+      tabs:trips
+
+    };
   },
   components: {},
-  methods() {},
+   methods:{
+    navigate: function(e){
+      if (e.target.dataset.show) {
+        e.preventDefault();
+        this.show = e.target.dataset.show;
+      }
+    },
+    alerts: function(e){
+      if (e.target.dataset.alert) {
+        e.preventDefault();
+        alert(e.target.dataset.alert);
+      }
+    }
+  },
+  created(){
+    console.log(this.tabs);
+  }
 };
 </script>
 
