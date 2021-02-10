@@ -14,19 +14,19 @@
       
       <div class="social-links with-share">
         <div class="share-it">share it</div>
-        <a href="http://" target="_blank" rel="noopener noreferrer">
+        <a href="http://" title="twitter" target="_blank" rel="noopener noreferrer">
           <img src="@/assets/images/twitter.svg" alt="twitter" srcset="" />
         </a>
-        <a href="http://" target="_blank" rel="noopener noreferrer">
+        <a href="http://" title="instagram" target="_blank" rel="noopener noreferrer">
           <img
             width="20px"
             src="@/assets/images/instagram.svg"
-            alt="twitter"
+            alt="instagram"
             srcset=""
           />
         </a>
-        <a href="http://" target="_blank" rel="noopener noreferrer">
-          <img src="@/assets/images/facebook.svg" alt="twitter" srcset="" />
+        <a href="http://" target="_blank" title="facebook" rel="noopener noreferrer">
+          <img src="@/assets/images/facebook.svg" alt="facebook" srcset="" />
         </a>
       </div>
     </div>

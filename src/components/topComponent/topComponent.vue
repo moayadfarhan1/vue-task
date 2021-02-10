@@ -3,7 +3,7 @@
     <div
       class="container container-sm container-md container-lg position-relative top-section-container"
     >
-      <headerComponent/>
+      <headerComponent />
       <div class="d-flex flex-column justify-center about-trips">
         <h1 class="title">Night Trips</h1>
         <h3 class="sub-title">WE GOT TRIPS FOR THE TRIPPSTER IN YOU</h3>
@@ -15,19 +15,34 @@
         </p>
       </div>
       <div class="social-links">
-        <a href="http://" target="_blank" rel="noopener noreferrer">
+        <a
+          href="http://"
+          title="twitter"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src="@/assets/images/twitter.svg" alt="twitter" srcset="" />
         </a>
-        <a href="http://" target="_blank" rel="noopener noreferrer">
+        <a
+          href="http://"
+          title="instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             width="20px"
             src="@/assets/images/instagram.svg"
-            alt="twitter"
+            alt="instagram"
             srcset=""
           />
         </a>
-        <a href="http://" target="_blank" rel="noopener noreferrer">
-          <img src="@/assets/images/facebook.svg" alt="twitter" srcset="" />
+        <a
+          href="http://"
+          target="_blank"
+          title="facebook"
+          rel="noopener noreferrer"
+        >
+          <img src="@/assets/images/facebook.svg" alt="facebook" srcset="" />
         </a>
       </div>
       <div class="scroll-container">
@@ -44,8 +59,7 @@ export default {
     headerComponent,
   },
   data() {
-    return {
-    };
+    return {};
   },
   methods: {},
   mounted() {},
