@@ -1,0 +1,409 @@
+@import './normalize.scss';
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Larsseit";
+    color: #fff;
+    background-color: #011627;
+}
+
+.bg-image {
+    background-image: url("~@/assets/images/bg.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: 100% 100%;
+}
+
+.bg-bottom {
+    background-image: url("~@/assets/images/lights.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: 100% 100%;
+}
+
+.btn {
+    position: relative;
+    cursor: pointer;
+    width: 94px;
+    height: 42px;
+    font-family: Larsseit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 11px;
+    background: #00C9E0;
+    /* Button Shadow */
+    box-shadow: 5px 15px 40px rgba(0, 201, 224, 0.2);
+    border-radius: 48px;
+    -moz-border-radius: 48px;
+    /*gecko - mozilla*/
+    -webkit-border-radius: 48px;
+    /*new webkit - Chrome and Safari*/
+    -moz-box-shadow:
+        5px 15px 40px rgba(0, 201, 224, 0.2);
+    /*gecko - mozilla*/
+    -webkit-box-shadow:
+        5px 15px 40px rgba(0, 201, 224, 0.2);
+
+    /*new webkit - Chrome and Safari*/
+    &::after {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -5px;
+        transition: right .5s;
+        background-color: #fff;
+        border-radius: 16px;
+    }
+
+    &:hover {
+        background: #06b2c5;
+        border-radius: 48px;
+        &::after {
+            right: 0px;
+        }
+    }
+
+    &:focus {
+        outline: 0;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+.header {
+    @extend .d-flex,
+    .align-center,
+    .space-between;
+    padding-top: 20px;
+
+    .logo {
+        width: 60px;
+    }
+
+    .search-icon {
+        width: 18px;
+        margin-right: 20px;
+    }
+}
+
+.about-trips {
+    .title {
+        font-family: Noe Display;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 60px;
+        margin-top: 60px;
+        text-align: center;
+        line-height: 100px;
+        color: #FFFFFF;
+    }
+
+    .sub-title {
+        font-family: Larsseit;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 12px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-family: Larsseit;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+        margin-top: 25px;
+        line-height: 16px;
+        text-align: center;
+        color: #FFFFFF;
+        width: 100%;
+    }
+
+
+}
+
+.top-section {
+    .top-section-container {
+        height: 100vh;
+
+        .social-links {
+            position: absolute;
+            bottom: 0;
+            right: 20px;
+            z-index: 99999;
+
+            a {
+                img {
+                    margin-bottom: 25px;
+                    max-width: 24px;
+                }
+
+                &:hover {
+                    img {
+                        -webkit-animation: spin 4s linear infinite;
+                        -moz-animation: spin 4s linear infinite;
+                        animation: spin 4s linear infinite;
+                    }
+                }
+
+                position: relative;
+            }
+        }
+
+        @-moz-keyframes spin {
+            100% {
+                -moz-transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        .scroll-container {
+            position: absolute;
+            bottom: 118px;
+
+            .scroll-text {
+                position: relative;
+                bottom: 0;
+                left: 0;
+                font-family: Larsseit;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 15px;
+                line-height: 190%;
+                /* or 28px */
+
+
+                letter-spacing: 0.05em;
+
+                color: #FFFFFF;
+
+                opacity: 0.9;
+                text-transform: uppercase;
+
+                transform: rotate(-90deg);
+                z-index: 99999;
+
+                &::after {
+                    content: ' ';
+                    position: absolute;
+                    height: 80px;
+                    animation: mymove 3s infinite;
+                    left: 50%;
+                    top: 15px;
+                    z-index: 99999;
+                    transform: translate(-50%, 15px);
+                    width: 2px;
+                    background: linear-gradient(180deg, #09F4F4 0%, #00C9E0 100%);
+                    border-radius: 13px;
+                }
+            }
+        }
+    }
+
+    .divider {
+        background: linear-gradient(180deg, rgba(1, 22, 39, 0) 0%, #011627 76.64%, #011627 100%);
+        height: 377px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    @keyframes mymove {
+        0% {
+            top: 5px;
+        }
+
+        25% {
+            top: 15px;
+        }
+
+        50% {
+            top: 25px;
+        }
+
+        75% {
+            top: 15px;
+        }
+
+        100% {
+            top: 5px;
+        }
+    }
+}
+
+.bottom-section {
+    padding-top: 40px;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-reverse {
+    flex-direction: row-reverse;
+}
+
+@media screen and (min-width: 992px) {
+    .btn {
+        width: 167px;
+        height: 62px;
+        font-size: 16px;
+        line-height: 21px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 2px;
+        }
+    }
+
+    .header {
+        @extend .d-flex,
+        .align-center,
+        .space-between;
+        padding-top: 40px;
+
+        .logo {
+            width: 60px;
+        }
+
+        .search-icon {
+            width: 18px;
+            margin-right: 40px;
+        }
+    }
+
+    .about-trips {
+        min-height: calc(100vh - 248px);
+
+        .title {
+            font-size: 120px;
+            line-height: 153px;
+            margin-top: 120px;
+        }
+
+        .sub-title {
+            font-size: 18px;
+            line-height: 24px;
+            margin-top: 15px;
+        }
+
+        p {
+            width: 643px;
+            margin: auto;
+            font-size: 17px;
+            line-height: 25px;
+            margin-top: 50px;
+        }
+    }
+
+    .top-section {
+        .top-section-container {
+            .social-links {
+                bottom: 150px;
+                right: 0;
+            }
+            .scroll-container {
+                position: absolute;
+                bottom: 262px;
+
+                .scroll-text {
+                    position: relative;
+                    bottom: 0;
+                    left: 0;
+                    font-family: Larsseit;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 190%;
+                    /* or 28px */
+
+
+                    letter-spacing: 0.05em;
+
+                    color: #FFFFFF;
+
+                    opacity: 0.9;
+                    text-transform: uppercase;
+
+                    transform: rotate(-90deg);
+                    z-index: 99999;
+
+                    &::after {
+                        content: ' ';
+                        position: absolute;
+                        height: 80px;
+                        animation: mymove 3s infinite;
+                        left: 50%;
+                        top: 15px;
+                        z-index: 99999;
+                        transform: translate(-50%, 15px);
+                        width: 2px;
+                        background: linear-gradient(180deg, #09F4F4 0%, #00C9E0 100%);
+                        border-radius: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
