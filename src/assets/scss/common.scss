@@ -1,5 +1,40 @@
 @import './normalize.scss';
+@import "./assets/scss/container";
 
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Larsseit";
+  color: #fff;
+  background-color: #011627;
+}
+@font-face {
+  font-family: "Larsseit";
+  src: url("./assets/fonts/Larsseit.eot");
+  src: url("./assets/fonts/Larsseit.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/Larsseit.woff2") format("woff2"),
+    url("./assets/fonts/Larsseit.woff") format("woff"),
+    url("./assets/fonts/Larsseit.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noe Display";
+  src: url("./assets/fonts/NoeDisplay-Bold.eot");
+  src: url("./assets/fonts/NoeDisplay-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/NoeDisplay-Bold.woff2") format("woff2"),
+    url("./assets/fonts/NoeDisplay-Bold.woff") format("woff"),
+    url("./assets/fonts/NoeDisplay-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 html,
 body {
     padding: 0;
@@ -85,6 +120,86 @@ body {
     }
 }
 
+.social-links {
+    position: absolute;
+    display: flex;
+    z-index: 9999;
+    a {
+        img {
+            margin-bottom: 25px;
+            max-width: 24px;
+        }
+
+        &:hover {
+            img {
+                -webkit-animation: spin 4s linear infinite;
+                -moz-animation: spin 4s linear infinite;
+                animation: spin 4s linear infinite;
+            }
+        }
+
+        position: relative;
+    }
+    &.with-share{
+        right: 0;
+        flex-wrap: wrap;
+        a {
+            img {
+                margin-right: 25px;
+                max-width: 24px;
+            }
+    
+            &:hover {
+                img {
+                    -webkit-animation: spin 4s linear infinite;
+                    -moz-animation: spin 4s linear infinite;
+                    animation: spin 4s linear infinite;
+                }
+            }
+    
+            position: relative;
+        }
+        &:after{
+            content: "";
+            position: absolute;
+            width: 132px;
+            height: 12px;
+            bottom: 0;
+            border-bottom: 2px solid #41ead4;
+            border-right: 2px solid #41ead4;
+            margin-top: -16px;
+        }
+        .share-it{
+            width: 100%;
+            font-family: Larsseit;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 150%;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
 
 // start top section
 .top-section {
@@ -96,6 +211,10 @@ body {
 
         .logo {
             width: 60px;
+            transition: transform .2s;
+            &:hover {
+                transform: scale(1.1);
+            }
         }
 
         .search-icon {
@@ -111,13 +230,6 @@ body {
     }
 
     .about-trips {
-        transition: transform .2s;
-
-        /* Animation */
-        &:hover {
-            transform: scale(1.2);
-        }
-
         .title {
             font-family: Noe Display;
             font-style: normal;
@@ -158,46 +270,7 @@ body {
         height: 100vh;
 
         .social-links {
-            position: absolute;
-            bottom: 0;
-            right: 20px;
-            z-index: 99999;
-
-            a {
-                img {
-                    margin-bottom: 25px;
-                    max-width: 24px;
-                }
-
-                &:hover {
-                    img {
-                        -webkit-animation: spin 4s linear infinite;
-                        -moz-animation: spin 4s linear infinite;
-                        animation: spin 4s linear infinite;
-                    }
-                }
-
-                position: relative;
-            }
-        }
-
-        @-moz-keyframes spin {
-            100% {
-                -moz-transform: rotate(360deg);
-            }
-        }
-
-        @-webkit-keyframes spin {
-            100% {
-                -webkit-transform: rotate(360deg);
-            }
-        }
-
-        @keyframes spin {
-            100% {
-                -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
+            flex-direction: column;
         }
 
         .scroll-container {
@@ -530,7 +603,6 @@ body {
                         }
                     }
                 }
-
                 .btn {
                     width: 100%;
                     margin-bottom: 20px;
@@ -542,7 +614,9 @@ body {
 
         }
     }
-
+    .social-links{
+        flex-direction: row;
+    }
 }
 
 // end bottom section
