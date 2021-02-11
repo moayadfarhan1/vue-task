@@ -141,8 +141,9 @@ body {
         position: relative;
     }
     &.with-share{
-        right: 0px;
+        position: static;
         flex-wrap: wrap;
+        justify-content: center;
         a {
             img {
                 margin-right: 25px;
@@ -170,6 +171,7 @@ body {
             margin-top: -16px;
         }
         .share-it{
+            text-align: center;
             width: 100%;
             font-family: Larsseit;
             font-style: normal;
@@ -953,10 +955,19 @@ body {
                         width: 60%;
                     }
                 }
-
             }
         }
-
+        .social-links{
+            &.with-share{
+                position: absolute;
+                right: 0;
+                flex-wrap: wrap;
+                justify-content: unset;
+                .share-it{
+                    text-align: left;
+                }
+            }
+        }
     }
 
     // end bottom section
