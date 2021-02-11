@@ -50,10 +50,9 @@
   </section>
 </template>
 <script>
-const headerComponent = () =>import("../headerComponent/header");
 export default {
   components: {
-    headerComponent:headerComponent,
+    headerComponent:() =>import("../headerComponent/header"),
   },
   data() {
     return {};

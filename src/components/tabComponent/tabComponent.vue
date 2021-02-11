@@ -33,12 +33,10 @@
   </div>
 </template>
 <script>
-import sliderComponent from "../sliderComponent/sliderComponent";
-
 export default {
   props: ["tabContent"],
   components: {
-    sliderComponent,
+    sliderComponent: () =>import("../sliderComponent/sliderComponent"),
   },
   data() {
     return {

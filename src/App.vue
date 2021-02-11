@@ -7,9 +7,6 @@
   </div>
 </template>
 <script>
-const bottomComponent = () =>import("./components/bottomComponent/bottomComponent");
-const topComponent = () => import("./components/topComponent/topComponent");
-const sideComponent = () => import("./components/sideComponent/sideComponent");
 export default {
   name: "App",
   data() {
@@ -18,9 +15,9 @@ export default {
     };
   },
   components: {
-    topComponent: topComponent,
-    bottomComponent: bottomComponent,
-    sideComponent: sideComponent,
+    topComponent:  () => import("./components/topComponent/topComponent"),
+    bottomComponent:  () => import("./components/bottomComponent/bottomComponent"),
+    sideComponent:  () => import("./components/sideComponent/sideComponent"),
   },
   methods: {
     openMenu() {

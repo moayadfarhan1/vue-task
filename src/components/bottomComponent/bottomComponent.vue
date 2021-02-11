@@ -34,11 +34,9 @@
 </template>
 <script>
 import trips from "../../data.json";
-import tabComponent from '../tabComponent/tabComponent'
-
 export default {
   components: {
-    tabComponent,
+    tabComponent:()=>import("../tabComponent/tabComponent"),
   },
   data() {
     return {
