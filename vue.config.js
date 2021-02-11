@@ -1,11 +1,7 @@
-module.exports = {
-    pwa: {
-      themeColor: "#42b983",
-      msTileColor: "#42b983",
-      appleMobileWebAppCache: "yes",
-      manifestOptions: {
-        background_color: "#42b983"
-      }
-    },
-    publicPath: '/vue-task/'
-  };
+// // vue.config.js file to be place in the root of your repository
+
+// module.exports = {
+//     publicPath: process.env.NODE_ENV === 'production'
+//       ? '/vue-task/'
+//       : '/'
+//   }

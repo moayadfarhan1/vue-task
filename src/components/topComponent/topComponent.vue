@@ -3,7 +3,7 @@
     <div
       class="container container-sm container-md container-lg position-relative top-section-container"
     >
-      <headerComponent />
+      <headerComponent  @openMenu="openMenu"/>
       <div class="d-flex flex-column justify-center about-trips">
         <h1 class="title">Night Trips</h1>
         <p class="sub-title">WE GOT TRIPS FOR THE TRIPPSTER IN YOU</p>
@@ -58,7 +58,11 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    openMenu(){
+      this.$emit("openMenu");
+    }
+  },
   mounted() {},
 };
 </script>

@@ -15,7 +15,7 @@
           alt="Search Logo"
         />
       </a>
-      <button type="button" class="btn">Menu</button>
+      <button type="button" class="btn" @click="openMenu">Menu</button>
     </div>
     <!-- End Action -->
   </header>
@@ -26,7 +26,11 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    openMenu() {
+      this.$emit("openMenu");
+    },
+  },
   mounted() {},
 };
 </script>
