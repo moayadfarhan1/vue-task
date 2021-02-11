@@ -2,7 +2,7 @@
 
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 module.exports = {
-    publicPath:'http://localhost:8080/',
+    publicPath: process.env.NODE_ENV === 'production'? '/vue-task/':'http://localhost:8080/',
     configureWebpack: {
         plugins: [
             // new BundleAnalyzerPlugin()
