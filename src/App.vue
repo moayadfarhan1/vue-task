@@ -6,16 +6,14 @@
   </div>
 </template>
 <script>
-import bottomComponent from "./components/bottomComponent/bottomComponent";
-
-import topComponent from "./components/topComponent/topComponent";
-
+const bottomComponent = () => import('./components/bottomComponent/bottomComponent')
+const topComponent = () => import('./components/topComponent/topComponent')
 export default {
   name: "App",
   data() {
     return {};
   },
-  components: { topComponent, bottomComponent },
+  components: { topComponent:topComponent, bottomComponent:bottomComponent },
   methods: {},
   created() {},
 };
