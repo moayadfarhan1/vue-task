@@ -49,7 +49,7 @@ body {
 }
 
 .bg-image {
-    background-image: url("~@/assets/images/bg.png");
+    background-image: url("~@/assets/images/bg.webp");
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
@@ -208,27 +208,18 @@ body {
     z-index: 9999999999999;
     top: 0;
     right: 0;
-    background-color: #111;
-    opacity: 0.9;
+    text-align: center;
+    background-color: #000;
     overflow-x: hidden;
     padding-top: 60px;
+    visibility: hidden;
     transition: 0.3s;
+    &.sidenavopen{
+        width: 250px;
+        visibility: visible;
+    }
   }
   
-  .sidenavopen{
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    z-index: 9999999999;
-    top: 0;
-    right: 0;
-    text-align: center;
-    background-color: #111;
-    opacity: 0.9;
-    overflow-x: hidden;
-    padding-top: 60px;
-    transition: 0.3s;
-  }
   
   .side-nav a{
     padding: 20px 10px 20px 10px;
@@ -237,7 +228,7 @@ body {
     color: #ccc;
     display: block;
     transition: 0.3s;
-    border-bottom: 1px solid #00C9E0;
+    border-bottom: 1px solid #ccc;
   }
   
   .side-nav a:hover{
@@ -245,16 +236,8 @@ body {
     color: #fff;
     background:#00C9E0;
     border-radius: 20px;
-    transform: scale(1.2);
   }
   
-  .side-nav .btn-close{
-    position: absolute;
-    top: 0;
-    right: 22px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
   .overlay {
     position: fixed;
     top: 0;
@@ -262,7 +245,8 @@ body {
     z-index: 9999999;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .7);
+    background: #000;
+    opacity: 0.5;
     transition: .3s linear;
   }
 // side nav End
@@ -599,8 +583,8 @@ body {
                 }
 
                 &::after {
-                    content: '';
-                    background-image: url('~@/assets/images/Dots.svg');
+                    content: '';        
+                    background-image: url('~@/assets/images/Dots.png');
                     position: absolute;
                     bottom: -28px;
                     left: -13px;

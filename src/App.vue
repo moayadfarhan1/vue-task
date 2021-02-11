@@ -3,12 +3,11 @@
     <sideComponent :opened="isOpened" />
     <topComponent @openMenu="openMenu" />
     <bottomComponent />
-    <!-- <div class="overlay" v-if="isOpened" @click="openMenu"></div> -->
+    <div class="overlay" v-if="isOpened" @click="openMenu"></div>
   </div>
 </template>
 <script>
-const bottomComponent = () =>
-  import("./components/bottomComponent/bottomComponent");
+const bottomComponent = () =>import("./components/bottomComponent/bottomComponent");
 const topComponent = () => import("./components/topComponent/topComponent");
 const sideComponent = () => import("./components/sideComponent/sideComponent");
 export default {
@@ -25,7 +24,6 @@ export default {
   },
   methods: {
     openMenu() {
-      console.log('inn');
       this.isOpened = !this.isOpened;
     },
   },
