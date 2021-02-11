@@ -6,7 +6,7 @@
       <headerComponent />
       <div class="d-flex flex-column justify-center about-trips">
         <h1 class="title">Night Trips</h1>
-        <h3 class="sub-title">WE GOT TRIPS FOR THE TRIPPSTER IN YOU</h3>
+        <p class="sub-title">WE GOT TRIPS FOR THE TRIPPSTER IN YOU</p>
         <p>
           Neque, eros commodo, nascetur ullamcorper vitae. Tincidunt ut
           venenatis, volutpat lorem ut faucibus mauris, quisque. Integer gravida
@@ -16,18 +16,16 @@
       </div>
       <div class="social-links">
         <a
-          href="http://"
+          href="/"
           title="twitter"
-          target="_blank"
-          rel="noopener noreferrer"
+          rel="icon"
         >
           <img src="@/assets/images/twitter.svg" alt="twitter" srcset="" />
         </a>
         <a
-          href="http://"
+          href="/"
           title="instagram"
-          target="_blank"
-          rel="noopener noreferrer"
+          rel="icon"
         >
           <img
             width="20px"
@@ -37,10 +35,9 @@
           />
         </a>
         <a
-          href="http://"
-          target="_blank"
+          href="/"
           title="facebook"
-          rel="noopener noreferrer"
+          rel="icon"
         >
           <img src="@/assets/images/facebook.svg" alt="facebook" srcset="" />
         </a>

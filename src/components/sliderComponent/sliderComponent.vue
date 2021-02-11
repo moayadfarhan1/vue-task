@@ -15,11 +15,15 @@
       </div>
       <div class="slider-nav">
         <button
-          class="btn-slider prev"
+          class="btn-slider prev" name="prev"
+          type="button"
+          aria-label="prev"
           @click.prevent="changeSlide(0)"
         ></button>
         <button
-          class="btn-slider next"
+          class="btn-slider next" name="next"
+          type="button"
+          aria-label="next"
           @click.prevent="changeSlide(1)"
         ></button>
       </div>
@@ -33,7 +37,7 @@
         <div>{{ tabDescSec }}</div>
       </div>
 
-      <button class="btn">SEE OUR LATEST OFFER</button>
+      <button type="button" class="btn">SEE OUR LATEST OFFER</button>
     </div>
   </div>
 </template>

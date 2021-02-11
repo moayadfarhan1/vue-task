@@ -1,26 +1,23 @@
 <template>
   <div id="app">
-    <topComponent/>
-    <bottomComponent/>
+    <meta name="Description" content="Moayad Task" />
+    <topComponent />
+    <bottomComponent />
   </div>
 </template>
 <script>
-import bottomComponent from './components/bottomComponent/bottomComponent'
+import bottomComponent from "./components/bottomComponent/bottomComponent";
 
-import topComponent from './components/topComponent/topComponent'
+import topComponent from "./components/topComponent/topComponent";
 
 export default {
   name: "App",
   data() {
-    return {
-    };
+    return {};
   },
-  components: {topComponent,bottomComponent},
-  methods: {
-
-  },
-  created() {
-  },
+  components: { topComponent, bottomComponent },
+  methods: {},
+  created() {},
 };
 </script>
 

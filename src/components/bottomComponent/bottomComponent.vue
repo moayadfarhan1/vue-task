@@ -14,10 +14,10 @@
       
       <div class="social-links with-share">
         <div class="share-it">share it</div>
-        <a href="http://" title="twitter" target="_blank" rel="noopener noreferrer">
+        <a  rel="icon" href="/" title="twitter">
           <img src="@/assets/images/twitter.svg" alt="twitter" srcset="" />
         </a>
-        <a href="http://" title="instagram" target="_blank" rel="noopener noreferrer">
+        <a rel="icon" href="/" title="instagram">
           <img
             width="20px"
             src="@/assets/images/instagram.svg"
@@ -25,7 +25,7 @@
             srcset=""
           />
         </a>
-        <a href="http://" target="_blank" title="facebook" rel="noopener noreferrer">
+        <a rel="icon" href="/" title="facebook">
           <img src="@/assets/images/facebook.svg" alt="facebook" srcset="" />
         </a>
       </div>
