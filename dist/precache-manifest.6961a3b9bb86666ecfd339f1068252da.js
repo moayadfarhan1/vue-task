@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6b7c143f99dc5af0f1dc",
+    "revision": "8fbe93b527fc02327233",
     "url": "http://localhost:8080/css/app.4c9cd44d.css"
   },
   {
-    "revision": "ddaa693c947467996f77",
+    "revision": "aa600af26723752e8619",
     "url": "http://localhost:8080/css/chunk-7723cbe4.ca72bde0.css"
   },
   {
@@ -76,36 +76,36 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "http://localhost:8080/img/twitter.89343eff.svg"
   },
   {
-    "revision": "72a7d8e59322d7ca5273c1f9d81fba20",
+    "revision": "f4b93ab2e6b09bd5465d9a6ac96199fb",
     "url": "http://localhost:8080/index.html"
   },
   {
-    "revision": "6b7c143f99dc5af0f1dc",
-    "url": "http://localhost:8080/js/app.bf94988b.js"
+    "revision": "8fbe93b527fc02327233",
+    "url": "http://localhost:8080/js/app.014b2546.js"
   },
   {
-    "revision": "8c305caaff63fa61ed41",
-    "url": "http://localhost:8080/js/chunk-1154dced.6dda1770.js"
+    "revision": "1fe275beecbd9758777c",
+    "url": "http://localhost:8080/js/chunk-1154dced.9a5ce48f.js"
   },
   {
-    "revision": "ebebcc5f23497e5bdd03",
-    "url": "http://localhost:8080/js/chunk-2d21ed56.1787f6cd.js"
+    "revision": "89091f990907ff9f9cf2",
+    "url": "http://localhost:8080/js/chunk-2d21ed56.30fb02c2.js"
   },
   {
-    "revision": "63ec4515a71031b0baff",
-    "url": "http://localhost:8080/js/chunk-3d3db70d.8bd81bc1.js"
+    "revision": "fd321fa9a4921bcaae62",
+    "url": "http://localhost:8080/js/chunk-3d3db70d.c0108118.js"
   },
   {
-    "revision": "ddaa693c947467996f77",
-    "url": "http://localhost:8080/js/chunk-7723cbe4.32179533.js"
+    "revision": "aa600af26723752e8619",
+    "url": "http://localhost:8080/js/chunk-7723cbe4.3338ace2.js"
   },
   {
-    "revision": "ba5794a4bf729be1d96a",
-    "url": "http://localhost:8080/js/chunk-fad8d524.1f3798e1.js"
+    "revision": "36abba7d6cca7e3490d9",
+    "url": "http://localhost:8080/js/chunk-fad8d524.b8547b38.js"
   },
   {
-    "revision": "f191c2e31ef5b5788e43",
-    "url": "http://localhost:8080/js/chunk-fc805466.ac69e0eb.js"
+    "revision": "6247026aac22b7c7c6b9",
+    "url": "http://localhost:8080/js/chunk-fc805466.924eb40c.js"
   },
   {
     "revision": "5563ed13dc7aea8f3dc6",
